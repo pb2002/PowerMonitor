@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Power_Monitor
+namespace Power_Monitor.Forms
 {
-    public partial class Form1 : Form
+    public partial class Frm_Settings : Form
     {
-        public Form1()
+        public Frm_Settings()
         {
             InitializeComponent();
         }
