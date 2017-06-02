@@ -28,9 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Settings));
+            this.SuspendLayout();
+            // 
+            // Frm_Settings
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Frm_Settings";
+            this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Frm_Settings";
+            this.Text = "Settings";
+            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.ResumeLayout(false);
+
         }
 
         #endregion

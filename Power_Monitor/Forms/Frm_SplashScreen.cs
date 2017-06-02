@@ -16,5 +16,17 @@ namespace Power_Monitor.Forms
         {
             InitializeComponent();
         }
+
+        private void Frm_SplashScreen_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void timer1_Tick(object sender, EventArgs e)
+        {
+            new Frm_Main().Show();
+            timer1.Enabled = false;
+            Hide();
+        }
     }
 }

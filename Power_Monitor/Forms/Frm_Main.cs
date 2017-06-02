@@ -16,5 +16,20 @@ namespace Power_Monitor.Forms
         {
             InitializeComponent();
         }
+
+        private void Frm_Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Tmr_Update_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
