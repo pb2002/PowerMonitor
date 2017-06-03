@@ -14,9 +14,11 @@ namespace Power_Monitor
         [STAThread]
         static void Main()
         {
+            Data.IOControl.Load();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Forms.Frm_SplashScreen());
+            Data.IOControl.Save();
         }
     }
 }

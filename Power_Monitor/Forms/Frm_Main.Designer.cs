@@ -36,12 +36,12 @@
             this.Lbl_PowerLineTxt = new System.Windows.Forms.Label();
             this.Mstrip_MenuBar = new System.Windows.Forms.MenuStrip();
             this.Mstrip_Start = new System.Windows.Forms.ToolStripMenuItem();
+            this.Mstrip_Start_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.Mstrip_Settings = new System.Windows.Forms.ToolStripMenuItem();
             this.Mstrip_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.Mstrip_Help_About = new System.Windows.Forms.ToolStripMenuItem();
             this.Mstrip_Help_Htu = new System.Windows.Forms.ToolStripMenuItem();
             this.Tmr_Update = new System.Windows.Forms.Timer(this.components);
-            this.Mstrip_Start_Exit = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_PowerlineInd)).BeginInit();
             this.Mstrip_MenuBar.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             // 
             this.ProgBar_BatteryLvl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProgBar_BatteryLvl.BackColor = System.Drawing.SystemColors.Control;
             this.ProgBar_BatteryLvl.Location = new System.Drawing.Point(13, 226);
             this.ProgBar_BatteryLvl.Name = "ProgBar_BatteryLvl";
             this.ProgBar_BatteryLvl.Size = new System.Drawing.Size(251, 23);
@@ -60,7 +61,7 @@
             this.Lbl_PercentageInd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_PercentageInd.AutoSize = true;
             this.Lbl_PercentageInd.Font = new System.Drawing.Font("LCD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_PercentageInd.Location = new System.Drawing.Point(270, 229);
+            this.Lbl_PercentageInd.Location = new System.Drawing.Point(270, 226);
             this.Lbl_PercentageInd.Name = "Lbl_PercentageInd";
             this.Lbl_PercentageInd.Size = new System.Drawing.Size(52, 23);
             this.Lbl_PercentageInd.TabIndex = 1;
@@ -69,9 +70,12 @@
             // 
             // PicBox_PowerlineInd
             // 
+            this.PicBox_PowerlineInd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PicBox_PowerlineInd.Image = global::Power_Monitor.Properties.Resources.glass2;
             this.PicBox_PowerlineInd.Location = new System.Drawing.Point(13, 27);
             this.PicBox_PowerlineInd.Name = "PicBox_PowerlineInd";
             this.PicBox_PowerlineInd.Size = new System.Drawing.Size(64, 64);
+            this.PicBox_PowerlineInd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_PowerlineInd.TabIndex = 2;
             this.PicBox_PowerlineInd.TabStop = false;
             // 
@@ -105,11 +109,18 @@
             this.Mstrip_Start.Size = new System.Drawing.Size(43, 20);
             this.Mstrip_Start.Text = "Start";
             // 
+            // Mstrip_Start_Exit
+            // 
+            this.Mstrip_Start_Exit.Name = "Mstrip_Start_Exit";
+            this.Mstrip_Start_Exit.Size = new System.Drawing.Size(152, 22);
+            this.Mstrip_Start_Exit.Text = "Exit";
+            // 
             // Mstrip_Settings
             // 
             this.Mstrip_Settings.Name = "Mstrip_Settings";
             this.Mstrip_Settings.Size = new System.Drawing.Size(70, 20);
             this.Mstrip_Settings.Text = "Settings...";
+            this.Mstrip_Settings.Click += new System.EventHandler(this.Mstrip_Settings_Click);
             // 
             // Mstrip_Help
             // 
@@ -123,13 +134,13 @@
             // Mstrip_Help_About
             // 
             this.Mstrip_Help_About.Name = "Mstrip_Help_About";
-            this.Mstrip_Help_About.Size = new System.Drawing.Size(152, 22);
+            this.Mstrip_Help_About.Size = new System.Drawing.Size(135, 22);
             this.Mstrip_Help_About.Text = "About";
             // 
             // Mstrip_Help_Htu
             // 
             this.Mstrip_Help_Htu.Name = "Mstrip_Help_Htu";
-            this.Mstrip_Help_Htu.Size = new System.Drawing.Size(152, 22);
+            this.Mstrip_Help_Htu.Size = new System.Drawing.Size(135, 22);
             this.Mstrip_Help_Htu.Text = "How to Use";
             // 
             // Tmr_Update
@@ -137,12 +148,6 @@
             this.Tmr_Update.Enabled = true;
             this.Tmr_Update.Interval = 500;
             this.Tmr_Update.Tick += new System.EventHandler(this.Tmr_Update_Tick);
-            // 
-            // Mstrip_Start_Exit
-            // 
-            this.Mstrip_Start_Exit.Name = "Mstrip_Start_Exit";
-            this.Mstrip_Start_Exit.Size = new System.Drawing.Size(152, 22);
-            this.Mstrip_Start_Exit.Text = "Exit";
             // 
             // Frm_Main
             // 

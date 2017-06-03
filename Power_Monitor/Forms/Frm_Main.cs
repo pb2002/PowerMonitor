@@ -26,10 +26,25 @@ namespace Power_Monitor.Forms
         {
             Application.Exit();
         }
-
+        PowerStatus pw = SystemInformation.PowerStatus;
         private void Tmr_Update_Tick(object sender, EventArgs e)
         {
+            UpdateChanges();
+        }
+        public void UpdateChanges()
+        {
+            Lbl_PowerLineTxt.Text = (pw.PowerLineStatus == PowerLineStatus.Online) ?
+                "Power Current" : "Battery";
+            PicBox_PowerlineInd.BackColor = (pw.PowerLineStatus == PowerLineStatus.Online) ?
+                Color.FromArgb(255, 192, 128) : Color.CadetBlue;
+            Lbl_PercentageInd.Text =
+                Convert.ToInt32(pw.BatteryLifePercent * 100) + "%";
+            ProgBar_BatteryLvl.Value = Convert.ToInt32(pw.BatteryLifePercent * 100);
+        }
 
+        private void Mstrip_Settings_Click(object sender, EventArgs e)
+        {
+            new Frm_Settings().ShowDialog(this);
         }
     }
 }

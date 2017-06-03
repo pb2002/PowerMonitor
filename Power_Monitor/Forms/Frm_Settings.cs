@@ -16,5 +16,16 @@ namespace Power_Monitor.Forms
         {
             InitializeComponent();
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label1.Text = trackBar1.Value + "ms";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Data.IOControl.CurrentData.TimerSpeed = trackBar1.Value;
+            Close();
+        }
     }
 }
